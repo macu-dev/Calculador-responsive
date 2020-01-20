@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Calculadora</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="contenedor">
+    <div class="pantalla">
+      <div id="cuenta" class="cuenta"></div>
+      <div id="resultado" class="resultado"></div>
+    </div>
+    <div class="fila1 fila1Margin">
+      <button  id="btn-ac" onclick="borratodo()">AC</button>
+      <button  id="btn-borrar" onclick="borrar()"><img src="img/cancelar (1).svg" alt="borrar"></button>
+      <button class="val" id="btn-porcentaje" >%</button>
+      <button class="val" id="btn-division">➗</button>
+    </div>
+    <div class="fila2">
+      <button class="val" id="btn-7">7</button>
+      <button class="val" id="btn-8">8</button>
+      <button class="val" id="btn-9">9</button>
+      <button class="val" id="btn-multiplicar">X</button>
+    </div>
+    <div class="fila3">
+      <button class="val" id="btn-4">4</button>
+      <button class="val" id="btn-5">5</button>
+      <button class="val" id="btn-6">6</button>
+      <button class="val" id="btn-resta">-</button>
+    </div>
+
+    <div class="fila4">
+      <button class="val" id="btn-1">1</button>
+      <button class="val" id="btn-2">2</button>
+      <button class="val" id="btn-3">3</button>
+      <button class="val" id="btn-suma">+</button>
+    </div>
+    
+    <div class="fila5">
+      <button class="val" id="btn-cero">0</button>
+      <button class="val" id="btn-punto">.</button>
+      <button id="btn-igual" onclick="calcular()">=</button>
+    </div>
+  </div>
+  <script src="js/app.js"></script>
+</body>
+</html>
