@@ -12,9 +12,6 @@ body{
   overflow-y: hidden;
 }
 
-
-
-
 html, body{
   width: 100%;
   height:100%;
@@ -55,7 +52,6 @@ html, body{
   margin-top:20px;
   
 }
-
 
 .fila2,.fila3,.fila4,.fila5{
   margin-bottom:0;
@@ -108,9 +104,6 @@ button:hover{
   color: rgb(211, 8, 226);
  }
  
- 
-
-
 @media(min-width: 1445px){
   .pantalla{
     height:251px;
@@ -140,7 +133,6 @@ button:hover{
   }
 }
 
-
 .fila1 > button{
   color:rgb(211, 8, 226);
   font-weight: bolder;
@@ -166,7 +158,6 @@ button:focus{
   letter-spacing: 3pt;
 
 }
-
 
 .resultado{
   width: 100%;

@@ -1,14 +1,9 @@
 let btn = document.querySelectorAll('.val');
 let nuevoArray = Array.from(btn);
-console.log(nuevoArray);
-
 
 nuevoArray.forEach(element => {
   element.onclick = handler;
 });
-
-console.log(nuevoArray);
-
 
 function handler(e) {
   let target = e.target.innerText;
@@ -20,9 +15,30 @@ function handler(e) {
   if(cuenta.innerHTML.length > 15 && cuenta.innerHTML.length <=20){
     cuenta.style.fontSize = '16px';
   }
-
-   console.log(resultado);
 }
+
+window.addEventListener('keyup', function teclado (e){
+  let cuenta = document.querySelector('#cuenta');
+
+  switch(e.key) {
+    case '1': case '2': case '3': case '4': case '5': case '6':
+    case '7': case '8': case '9': case '0': case "-":
+    case '+': case '*': case '/':   
+      if(cuenta.innerHTML.length <= 20){
+        cuenta.innerHTML += e.key;
+      }
+      if(cuenta.innerHTML.length > 15 && cuenta.innerHTML.length <=20){
+        cuenta.style.fontSize = '16px';
+      }
+      break;
+    case 'Enter':
+      calcular();
+    break;
+
+    case 'Backspace':
+      borratodo();
+  }
+});
 
 function calcular() {
   let cuentai = document.querySelector('#cuenta');
@@ -34,7 +50,6 @@ function calcular() {
   cuenta = cuenta.replace("X", "*");
   cuenta = cuenta.replace("%", "/100");
 
-  
   resultado.innerHTML = eval(cuenta);
 }
 
@@ -49,3 +64,4 @@ function borratodo() {
   cuenta.innerHTML = "";
   resultado.innerHTML = "";
 }
+
